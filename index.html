@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Incidencias</title>
+    <meta name="description" content="">
+    <meta name="author" content="Daniel Real Granell (@daregra)">
+    <!-- Mobile viewport optimization http://goo.gl/b9SaQ -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- For iPhone 4 with high-resolution Retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/icon@2x.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/icon-72.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/images/icon.png">
+    <link rel="apple-touch-startup-image" href="assets/images/default.png">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="./lungo.js/lungo-1.2.css">
+    <link rel="stylesheet" href="./lungo.js/lungo.theme.default.css">
+	
+
+	<style type="text/css">
+      #map-canvas {
+        height: 500px;
+        width: 600px;
+      }
+
+      .id {
+        font-weight: bold;
+        margin: 10px 0px 0px 0px;
+        padding: 0px;
+      }
+
+      .name, .categoria {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+	
+</head>
+
+<body class="app">
+
+    <section id="mapa">
+        <header data-title="Incidencias!">
+
+            <!--<a href="#aside-example" data-target="aside" data-icon="user" class="button onleft"> Info</a>-->
+            <a href="#info" data-target="section" data-icon="info" class="button onright"></a>
+			<a href="#article-1" data-target="article" data-icon="home" class="button onleft"></a>
+        </header>
+
+        <footer class="toolbar">
+            <nav>
+                <a href="#article-2" data-target="article" data-icon="pushpin" ></a>
+                <a href="#article-3" data-target="article" data-icon="items" ></a>
+                <a href="#article-4" data-target="article" data-icon="search" ></a>
+            </nav>
+        </footer>
+
+        <article id="article-1"><iframe width="100%" height="100%" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?viz=MAP&amp;q=select+col2+from+1YmoDEWT2ILAil9-Kn-Ft0ZO_M-p9DbfmJBcARvY&amp;h=false&amp;lat=40.058366&amp;lng=-0.182673&amp;z=12&amp;t=1&amp;l=col2&amp;y=1&amp;tmplt=1"></iframe></article>
+		<article id="article-2">
+			<form method="post">
+				<input type="text" placeholder="Nombre de la Incidencia" id="name"/>
+				<label class="select" id="categoria">
+					<select class="custom">
+						<option value="0">Categoria</option>
+						<option value="1">Alumbrado</option>
+						<option value="2">Mobiliario</option>
+						<option value="3">Calzada</option>
+						<option value="4">Animales</option>
+						<option value="5">Basuras</option>
+						<option value="6">Vandalismo</option>
+					</select>
+				</label>
+				<input type="text" placeholder="Direción" id="situacion"/>
+				<input type="text" placeholder="Nombre usuario" id="usuario"/>
+				<input type="mail" placeholder="Correo electronico" id="correo_usuario"/>
+				<input type="date" placeholder="Fecha de la incidencia" id="fecha"/>
+				<textarea placeholder="Descripción de la incidencia" id="comentario"></textarea>
+								<br/>
+				<label class="checkbox"><input type="checkbox" id="riesgo"/>Peligro        </label>
+				<br/><br/>
+				<a href="#article-1" class="button big green" data-icon="check" data-target="article">Añadir</a>
+				<a href="#article-1" class="button big red" data-icon="close" data-target="article">Cancelar</a>
+			</form>
+		</article>
+		
+        <article id="article-3" class="list scrollable">
+			<ul>
+				<!-- Para las resueltas -->
+				<li id="1" data-image=""><div class="onright bubble yellow" data-icon="star">15/08/2012</div><img src="http://farm1.static.flickr.com/112/400898535_fe5973757a.jpg"/> Farola Rota<small>Alumbrado</small></li>
+				<li id="1"><div class="onright">8/8/12</div><img src="file:///C:/Users/Dani/Desktop/PFC%20-%20Daniel%20Real%20Granell/Incidencias/assets/images/img_no.jpg"/> Farola fundida<small>Alumbrado</small></li>
+				<li id="1"><div class="onright">8/14/12</div><img src="http://www.milideas.net/wp-content/uploads/bache-asfalto.jpg"/> Bache en la calzada<small>Calzada</small></li>
+				<li id="1"><div class="onright">8/15/12</div><img src="http://3.bp.blogspot.com/-jidMxfjsf1I/TbsQMSkArKI/AAAAAAAAADw/TRGVDdWAwRY/s1600/libre+expresion.jpg"/> Pintadas<small>Vandalismo</small></li>
+				<li id="1"><div class="onright">9/5/12</div><img src="file:///C:/Users/Dani/Desktop/PFC%20-%20Daniel%20Real%20Granell/Incidencias/assets/images/img_no.jpg"/> Farola Rota<small>Alumbrado</small></li>
+				<li id="1"><div class="onright">7/12/11</div><img src="http://www.que.es/archivos/201205/nor-contenedores-quemados-365xXx80.jpg"/> Contenedor quemado<small>Vandalismo</small></li>
+				<li id="1"><div class="onright">9/10/11</div><img src="http://www.aytocabezondepisuerga.es/carteles/zanjaAvdeldeporte.jpg"/> Zanja en la Calzada<small>Calzada</small></li>
+				<li id="1"><div class="onright">8/16/11</div><img src="file:///C:/Users/Dani/Desktop/PFC%20-%20Daniel%20Real%20Granell/Incidencias/assets/images/img_no.jpg"/> Rotonda Abandonada<small>Calzada</small></li>
+				<li id="1"><div class="onright">8/17/11</div><img src="http://www.upyd.es/imagenes/2012/11/12/pistastenis_89571.jpg"/> Cancha de tenis en mal estado<small>Mobiliario</small></li>
+				<li id="1"><div class="onright">8/12/11</div><img src="http://nnggbaixllobregat.files.wordpress.com/2009/01/basuras.jpg"/> Acumulación de basuras<small>Basuras</small></li>
+				<li id="1"><div class="onright">8/18/11</div><img src="http://img1.loadtr.com/b-558082-Precioso_perro_abandonado_busca_due%C3%B1oUrgente!.jpg"/> Perro abandonado<small>Animales</small></li>
+				<li id="1"><div class="onright">8/02/11</div><img src="file:///C:/Users/Dani/Desktop/PFC%20-%20Daniel%20Real%20Granell/Incidencias/assets/images/img_no.jpg"/> Señal torcida<small>Calzada</small></li>
+				<li id="1"><div class="onright">7/16/11</div><img src="file:///C:/Users/Dani/Desktop/PFC%20-%20Daniel%20Real%20Granell/Incidencias/assets/images/img_no.jpg"/> Pintadas<small>Vandalismo</small></li>
+				<li id="1"><div class="onright">7/20/11</div><img src="file:///C:/Users/Dani/Desktop/PFC%20-%20Daniel%20Real%20Granell/Incidencias/assets/images/img_no.jpg"/> Bache en la calzada<small>Calzada</small></li>
+				<li id="1"><div class="onright">7/03/11</div><img src="file:///C:/Users/Dani/Desktop/PFC%20-%20Daniel%20Real%20Granell/Incidencias/assets/images/img_no.jpg"/> Paso de zebra no visible<small>Calzada</small></li>
+				<li id="1"><div class="onright">Fecha</div><img src="file:///C:/Users/Dani/Desktop/PFC%20-%20Daniel%20Real%20Granell/Incidencias/assets/images/img_no.jpg"/> Parada de autobus desplazadaa<small>Vandalismo</small></li>
+				<li id="1"><div class="onright">Fecha</div><img src="file:///C:/Users/Dani/Desktop/PFC%20-%20Daniel%20Real%20Granell/Incidencias/assets/images/img_no.jpg"/> Luz insuficiente<small>Alumbrado</small></li>
+				<li id="1"><div class="onright">Fecha</div><img src="file:///C:/Users/Dani/Desktop/PFC%20-%20Daniel%20Real%20Granell/Incidencias/assets/images/img_no.jpg"/> Automovil abandonado y deteriorado<small>Calzada</small></li>
+				<li id="1"><div class="onright">11/20/12</div><img src="file:///C:/Users/Dani/Desktop/PFC%20-%20Daniel%20Real%20Granell/Incidencias/assets/images/img_no.jpg"/> Vertedero Incontrolado<small>Basuras</small></li>
+			</ul>
+		</article>
+		<article id="article-4">
+				<a href="#alumbrado" class="button big yellow" data-icon="check" data-target="section">Alumbrado</a>
+				<a href="#mobiliario" class="button big green" data-icon="check" data-target="section">Mobiliario</a>
+				<a href="#calzada" class="button big blue" data-icon="check" data-target="section">Calzada</a>
+				<a href="#animales" class="button big orange" data-icon="check" data-target="section">Animales</a>
+				<a href="#basuras" class="button big dark" data-icon="check" data-target="section">Basuras</a>
+				<a href="#vandalismo" class="button big pink" data-icon="check" data-target="section">Vandalismo</a>	
+		</article>
+		
+    </section>
+
+    <section id="info">
+        <header data-back="home" data-title="Aprende a usarme!"></header>
+        <article>
+		<div>Utilizando esta aplicación podrás denunciar aquellas incidencias que veas en tu entorno. Intenta abrir los ojos y ayudar en la difusión, para conseguir un pueblo mejor.</div>
+		<div></br></div>
+		<div><strong>Aprende a utilizar la aplicación:</strong></div></br>
+		<div>Si deseas añadir una incidencia. Selecciona el simbolo que aparece en la imagen y rellena cuantos datos creas necesarios.</div><img src="file:///C:/Users/Dani/Desktop/PFC%20-%20Daniel%20Real%20Granell/Incidencias/assets/images/anyadir.png"/></br>
+		<div>Si quiere conocer un listado de las incidencias. Situate en el icono central.</div></br><img src="file:///C:/Users/Dani/Desktop/PFC%20-%20Daniel%20Real%20Granell/Incidencias/assets/images/lista.png"/></br>
+		<div>Si quieres conocer el listado de incidencias por categorias. Pulsa el boton derecho y selecciona la categoria en la lista.</div><img src="file:///C:/Users/Dani/Desktop/PFC%20-%20Daniel%20Real%20Granell/Incidencias/assets/images/categorias.png"/></br>
+		
+		</article>
+    </section>
+	<section id="alumbrado">
+        <header data-back="left" data-title="Alumbrado"></header>
+        <article id="pagina-alumbrado" class="list scrollable" >
+			<ul>
+				<li id="1" data-image=""><div class="onright bubble yellow" data-icon="star">15/08/2012</div><img src="http://farm1.static.flickr.com/112/400898535_fe5973757a.jpg"/> Farola Rota<small>Alumbrado</small></li>
+				<li id="1"><div class="onright">8/8/12</div><img src="file:///C:/Users/Dani/Desktop/PFC%20-%20Daniel%20Real%20Granell/Incidencias/assets/images/img_no.jpg"/> Farola fundida<small>Alumbrado</small></li>
+				<li id="1"><div class="onright">9/5/12</div><img src="file:///C:/Users/Dani/Desktop/PFC%20-%20Daniel%20Real%20Granell/Incidencias/assets/images/img_no.jpg"/> Farola Rota<small>Alumbrado</small></li>
+				<li id="1"><div class="onright">Fecha</div><img src="file:///C:/Users/Dani/Desktop/PFC%20-%20Daniel%20Real%20Granell/Incidencias/assets/images/img_no.jpg"/> Luz insuficiente<small>Alumbrado</small></li>
+			</ul>
+		</article>
+	</section>
+	<section id="mobiliario">
+        <header data-back="left" data-title="Mobiliario"></header>
+        <article id="pagina-mobiliario" class="list scrollable" >
+			<ul>
+				<li id="1"><div class="onright">8/17/11</div><img src="http://www.upyd.es/imagenes/2012/11/12/pistastenis_89571.jpg"/> Cancha de tenis en mal estado<small>Mobiliario</small></li>
+			</ul>
+		</article>
+	</section>
+	<section id="calzada">
+        <header data-back="left" data-title="Calzada"></header>
+        <article id="pagina-calzada" class="list scrollable" >
+			<ul>
+				<li id="1"><div class="onright">8/14/12</div><img src="http://www.milideas.net/wp-content/uploads/bache-asfalto.jpg"/> Bache en la calzada<small>Calzada</small></li>
+				<li id="1"><div class="onright">9/10/11</div><img src="http://www.aytocabezondepisuerga.es/carteles/zanjaAvdeldeporte.jpg"/> Zanja en la Calzada<small>Calzada</small></li>
+				<li id="1"><div class="onright">8/16/11</div><img src="file:///C:/Users/Dani/Desktop/PFC%20-%20Daniel%20Real%20Granell/Incidencias/assets/images/img_no.jpg"/> Rotonda Abandonada<small>Calzada</small></li>
+				<li id="1"><div class="onright">8/02/11</div><img src="file:///C:/Users/Dani/Desktop/PFC%20-%20Daniel%20Real%20Granell/Incidencias/assets/images/img_no.jpg"/> Señal torcida<small>Calzada</small></li>
+				<li id="1"><div class="onright">7/20/11</div><img src="file:///C:/Users/Dani/Desktop/PFC%20-%20Daniel%20Real%20Granell/Incidencias/assets/images/img_no.jpg"/> Bache en la calzada<small>Calzada</small></li>
+				<li id="1"><div class="onright">7/03/11</div><img src="file:///C:/Users/Dani/Desktop/PFC%20-%20Daniel%20Real%20Granell/Incidencias/assets/images/img_no.jpg"/> Paso de zebra no visible<small>Calzada</small></li>
+				<li id="1"><div class="onright">Fecha</div><img src="file:///C:/Users/Dani/Desktop/PFC%20-%20Daniel%20Real%20Granell/Incidencias/assets/images/img_no.jpg"/> Automovil abandonado y deteriorado<small>Calzada</small></li>
+			</ul>
+		</article>
+	</section>
+	<section id="animales">
+        <header data-back="left" data-title="Animales"></header>
+        <article id="pagina-animales" class="list scrollable" >
+			<ul>
+				<li id="1"><div class="onright">8/18/11</div><img src="http://img1.loadtr.com/b-558082-Precioso_perro_abandonado_busca_due%C3%B1oUrgente!.jpg"/> Perro abandonado<small>Animales</small></li>
+			</ul>
+		</article>
+	</section>
+    <section id="basuras">
+        <header data-back="left" data-title="Basuras"></header>
+        <article id="pagina-basuras" class="list scrollable" >
+			<ul>
+				<li id="1"><div class="onright">8/12/11</div><img src="http://nnggbaixllobregat.files.wordpress.com/2009/01/basuras.jpg"/> Acumulación de basuras<small>Basuras</small></li>
+				<li id="1"><div class="onright">11/20/12</div><img src="file:///C:/Users/Dani/Desktop/PFC%20-%20Daniel%20Real%20Granell/Incidencias/assets/images/img_no.jpg"/> Vertedero Incontrolado<small>Basuras</small></li>
+			</ul>
+		</article>
+	</section>
+	<section id="vandalismo">
+        <header data-back="left" data-title="Vandalismo"></header>
+        <article id="pagina-vandalismo" class="list scrollable" >
+			<ul>
+				<li id="1"><div class="onright">8/15/12</div><img src="http://3.bp.blogspot.com/-jidMxfjsf1I/TbsQMSkArKI/AAAAAAAAADw/TRGVDdWAwRY/s1600/libre+expresion.jpg"/> Pintadas<small>Vandalismo</small></li>
+				<li id="1"><div class="onright">7/12/11</div><img src="http://www.que.es/archivos/201205/nor-contenedores-quemados-365xXx80.jpg"/> Contenedor quemado<small>Vandalismo</small></li>
+				<li id="1"><div class="onright">7/16/11</div><img src="file:///C:/Users/Dani/Desktop/PFC%20-%20Daniel%20Real%20Granell/Incidencias/assets/images/img_no.jpg"/> Pintadas<small>Vandalismo</small></li>
+				<li id="1"><div class="onright">Fecha</div><img src="file:///C:/Users/Dani/Desktop/PFC%20-%20Daniel%20Real%20Granell/Incidencias/assets/images/img_no.jpg"/> Parada de autobus desplazadaa<small>Vandalismo</small></li>
+			</ul>
+		</article>
+	</section>
+	
+	<!-- Otros Javascript -->
+	
+	
+	
+	
+        <!-- LungoJS (Production mode) -->
+    <script src="lungo.js/lungo-1.2.js"></script>
+    <!-- LungoJS - Sandbox App -->
+    <script src="app/app.js"></script>
+    <script src="app/data.js"></script>
+    <script src="app/events.js"></script>
+    <script src="app/services.js"></script>
+    <script src="app/view.js"></script>
+</body>
+</html>

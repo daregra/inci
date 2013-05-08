@@ -1,0 +1,8 @@
+<iframe width="500" height="300" scrolling="yes" frameborder="no" src="
+https://www.google.com/fusiontables/
+embedviz?viz=GVIZ&amp;
+t=TABLE&amp;
+containerId=gviz_canvas&amp;
+q=select+col1%2C+col0%2C+col6%2C+col2%2C+col3%2C+col8%2C+col5%2C+col7%2C+col4+
+from+1YmoDEWT2ILAil9-Kn-Ft0ZO_M-p9DbfmJBcARvY
+"></iframe>
